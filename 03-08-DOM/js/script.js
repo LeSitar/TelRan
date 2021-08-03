@@ -21,7 +21,7 @@ const promos = document.querySelectorAll('.promo__adv img, .promo__adv .promo__a
 const removePromos = (advertising, elements) => {
     for (let promo of elements)
         advertising.removeChild(promo)
-    return advertising
+    return advertising      // зачем здесь return?
 }
 
 removePromos(promos_adv, promos);
