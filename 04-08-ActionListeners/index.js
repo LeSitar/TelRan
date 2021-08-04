@@ -47,9 +47,10 @@ const getSizeValue = (item) => {
 
 //task 3
 const square = document.getElementById('square')
-square.style.cssText = "width: 300px; height: 300px; background-color: yellow; cursor: pointer; transition: background-color 1s ease"
-
+square.style.cssText = "text-align: center; width: 300px; height: 300px; background-color: yellow; cursor: pointer; transition: background-color 1s ease"
+let iterator = 0;
 square.onclick = () => {
+    square.innerHTML = `<h1 style="margin: 0; font-size: 14em; line-height: 300px; color: white">${iterator++}</h1>`
     square.style.backgroundColor = `#${Math.random().toString(16).substring(2, 8).toUpperCase()}`
 }
 
