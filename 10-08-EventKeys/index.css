@@ -1,4 +1,4 @@
-#removeBox , #circleBox{
+#removeBox , #circleBox, #items{
     display: flex;
     flex-direction: row;
     cursor: pointer;
