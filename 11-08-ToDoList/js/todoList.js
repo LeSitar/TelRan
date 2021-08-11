@@ -26,7 +26,7 @@ const createAction = (id, action) => {
 list.onclick = (event) => {
     const value = parseInt(event.target.children[0].id);
     const check = event.target.children[0].checked;
-    if (check === false) {
+    if (check === false) {      // у вас check и так boolean, зачем писать эту проверку? лучше - (!check)
         event.target.children[0].checked = true;
         listActions[value].done = true;
         event.target.style.textDecoration = 'line-through'
@@ -37,3 +37,5 @@ list.onclick = (event) => {
     }
     console.log(listActions)
 }
+
+//  checkbox лучше подписать на событие onchange и, когда оно происходит изменять значение done 
